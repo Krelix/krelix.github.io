@@ -4,12 +4,13 @@
 
 import React from 'react'
 
+import Sidebar from './sidebar'
+
 export default class Main extends React.Component {
   render(){
     return (
-      <div>
-        <h2>HELLO WORLD</h2>
-        <p>THIS IS SOME FUN TEST.</p>
+      <div style={{display:"flex", flexFlow: "row"}}>
+        <Sidebar />
       </div>
     )
   }
