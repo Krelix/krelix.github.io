@@ -23,7 +23,7 @@
   "scripts": {
     "clean": "",
     "test": "",
-    "start": "npm run watch",
+    "start": "webpack -w -d ./js/index.js",
     "build": "webpack -d ./js/index.js",
     "watch" : "webpack -w -d ./js/index.js"
   }
