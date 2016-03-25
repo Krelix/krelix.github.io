@@ -21,7 +21,7 @@
             2
         ],
         "linebreak-style": [
-            "error",
+            1,
             "unix"
         ],
         "quotes": [
