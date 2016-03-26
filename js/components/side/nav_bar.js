@@ -9,15 +9,18 @@ let navs = [
   {
     id: '1',
     title: 'About',
-    to : '/'
+    to : '/',
+    isIndex: true
   }, {
     id: '2',
     title: 'Contact',
-    to : '/contact'
+    to : 'contact',
+    isIndex: false
   }, {
     id: '3',
     title: 'Projects',
-    to : '/projects'
+    to : 'projects',
+    isIndex: false
   }
 ];
 
@@ -48,7 +51,7 @@ export default class NavBar extends React.Component {
         style={{display: 'flex', flexFlow: 'column', alignContent: 'stretch', fontSize: '1.2em', fontWeight:'bold', lineHeight:'3em'}}>
         {
           this.state.navs.map((navObj) => {
-            return (<NavItem key={navObj.id} title={navObj.title} to={navObj.to} />);
+            return (<NavItem key={navObj.id} title={navObj.title} to={navObj.to} isIndex={navObj.isIndex} />);
           })
         }
       </div>

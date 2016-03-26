@@ -17,8 +17,8 @@ export default class Routes extends React.Component {
       <Router history={hashHistory}>
         <Route path="/" component={Main}>
           <IndexRoute component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/projects" component={ProjectList}/>
+          <Route path="contact" component={Contact}/>
+          <Route path="projects" component={ProjectList}/>
         </Route>
       </Router>
     );
