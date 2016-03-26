@@ -5,7 +5,8 @@ import React from 'react';
 
 export default class About extends React.Component {
   render() {
-    // TODO: method stub
-    return null;
+    return (
+      <h1>About</h1>
+    );
   }
 }

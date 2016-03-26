@@ -5,7 +5,8 @@ import React from 'react';
 
 export default class Contact extends React.Component {
   render() {
-    // TODO: method stub
-    return null;
+    return (
+      <h1>Contact</h1>
+    );
   }
 }
