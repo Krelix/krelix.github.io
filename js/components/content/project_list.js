@@ -5,7 +5,8 @@ import React from 'react';
 
 export default class ProjectList extends React.Component {
   render() {
-    // TODO: method stub
-    return null;
+    return (
+      <h1>Projects... So nothing to see here.</h1>
+    );
   }
 }

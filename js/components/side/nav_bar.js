@@ -9,15 +9,15 @@ let navs = [
   {
     id: '1',
     title: 'About',
-    selected: true
+    to : '/'
   }, {
     id: '2',
     title: 'Contact',
-    selected: false
+    to : '/contact'
   }, {
     id: '3',
     title: 'Projects',
-    selected: false
+    to : '/projects'
   }
 ];
 
@@ -25,11 +25,9 @@ export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 'navs' : navs };
-    // Binding this cause call from event means non-this context
-    this.handleNavClick = this.handleNavClick.bind(this);
   }
 
-  handleNavClick(e){
+  /*handleNavClick(e){
     let reactId = e.target.getAttribute('data-reactid'),
       newState = [],
       idTarget = reactId.substring( reactId.lastIndexOf('$')+1, reactId.length);
@@ -42,16 +40,15 @@ export default class NavBar extends React.Component {
       }
     });
     this.setState({ 'navs' : newState});
-  }
+  }*/
 
   render() {
     return (
       <div
-        style={{display: 'flex', flexFlow: 'column', alignContent: 'stretch', fontSize: '1.2em', fontWeight:'bold',color:'white', lineHeight:'3em'}}>
+        style={{display: 'flex', flexFlow: 'column', alignContent: 'stretch', fontSize: '1.2em', fontWeight:'bold', lineHeight:'3em'}}>
         {
           this.state.navs.map((navObj) => {
-            return (<NavItem key={navObj.id} title={navObj.title}
-                             selected={navObj.selected} onClick={this.handleNavClick} />);
+            return (<NavItem key={navObj.id} title={navObj.title} to={navObj.to} />);
           })
         }
       </div>

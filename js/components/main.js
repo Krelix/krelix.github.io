@@ -11,6 +11,7 @@ export default class Main extends React.Component {
     return (
       <div style={{display: 'flex', flexFlow: 'row'}}>
         <Sidebar />
+        {this.props.children}
       </div>
     );
   }
