@@ -48,7 +48,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ./js/index.js */1);
-	module.exports = __webpack_require__(/*! C:\Projets\webstorm\pages\js\index.js */1);
+	module.exports = __webpack_require__(/*! /Users/krelix/WebstormProjects/github_pages/js/index.js */1);
 
 
 /***/ },
@@ -20447,7 +20447,6 @@
 	    value: function render() {
 	      var _this2 = this;
 	
-	      console.log('THIS IS A RENDER CALL');
 	      return _react2.default.createElement(
 	        'div',
 	        {
@@ -20573,9 +20572,13 @@
 	        { style: { backgroundColor: 'rgb(238, 37, 96)', width: '18vw', alignSelf: 'center', marginTop: 'auto' } },
 	        _react2.default.createElement(
 	          'a',
-	          { href: 'https://twitter.com/Krelix', style: { border: 'none', fontDecoration: 'none', fontWeight: 'bold', fontSize: '1.25em', color: 'white', marginTop: '1.2em', verticalAlign: 'super', paddingLeft: '1.75em' } },
+	          { href: 'https://twitter.com/Krelix', style: { display: 'flex', border: 'none', fontDecoration: 'none', fontWeight: 'bold', fontSize: '1.25em', color: 'white', marginTop: '.2em', verticalAlign: 'super', paddingLeft: '1.75em' } },
 	          _react2.default.createElement('img', { src: 'assets/images/TwitterLogo_white.png', style: { height: '1.5em', verticalAlign: 'bottom' } }),
-	          '@Krelix'
+	          _react2.default.createElement(
+	            'span',
+	            { style: { marginTop: '0.2em' } },
+	            '@Krelix'
+	          )
 	        )
 	      );
 	    }
