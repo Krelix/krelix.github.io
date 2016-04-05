@@ -2,8 +2,19 @@
     background-color: #45d9fd !important;
     transform-style: preserve-3d;
     transform-origin: left center;
-    transform: perspective(15px) rotateY(-0.2deg) scaleX(0.95);
-    perspective: inherit;
-    perspective-origin: inherit;
+    animation-duration: 50ms;
+    animation-name: testIn;
+    animation-timing-function: ease-in;
     box-shadow: 5px 6px 0 0 rgb(187, 187, 187);
+    animation-fill-mode: forwards;
+}
+
+@keyframes testIn {
+    from {
+        transform: perspective(15px) rotateY(0deg) scaleX(1);
+    }
+
+    to {
+        transform: perspective(15px) rotateY(-0.3deg) scaleX(0.9);
+    }
 }

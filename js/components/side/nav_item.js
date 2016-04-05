@@ -16,8 +16,7 @@ export default class NavItem extends React.Component {
       );
     } else if (this.props.title) {
       return (
-        <Link style={{backgroundColor: '#8FDEF2', color:'white', textDecoration: 'none', paddingLeft:'1.5em',
-              transformOrigin: '0 center', perspectiveOrigin: '0 center'}}
+        <Link style={{backgroundColor: '#8FDEF2', color:'white', textDecoration: 'none', paddingLeft:'1.5em'}}
               to={this.props.to} activeClassName="active">
           <span style={{}}>{this.props.title}</span>
         </Link>
