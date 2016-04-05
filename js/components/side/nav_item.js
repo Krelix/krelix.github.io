@@ -11,14 +11,15 @@ export default class NavItem extends React.Component {
       return (
         <IndexLink style={{backgroundColor: '#8FDEF2', color:'white', textDecoration: 'none', paddingLeft:'1.5em'}}
               to={this.props.to} activeClassName="active">
-          {this.props.title}
+          <span>{this.props.title}</span>
         </IndexLink>
       );
     } else if (this.props.title) {
       return (
-        <Link style={{backgroundColor: '#8FDEF2', color:'white', textDecoration: 'none', paddingLeft:'1.5em'}}
+        <Link style={{backgroundColor: '#8FDEF2', color:'white', textDecoration: 'none', paddingLeft:'1.5em',
+              transformOrigin: '0 center', perspectiveOrigin: '0 center'}}
               to={this.props.to} activeClassName="active">
-          {this.props.title}
+          <span style={{}}>{this.props.title}</span>
         </Link>
       );
     } else {

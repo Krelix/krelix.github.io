@@ -1,3 +1,9 @@
 .active {
     background-color: #45d9fd !important;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transform: perspective(15px) rotateY(-0.2deg) scaleX(0.95);
+    perspective: inherit;
+    perspective-origin: inherit;
+    box-shadow: 5px 6px 0 0 rgb(187, 187, 187);
 }
