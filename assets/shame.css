@@ -1,0 +1,9 @@
+@keyframes testIn {
+    from {
+        transform: perspective(1em) rotateY(0deg) scaleX(1);
+    }
+
+    to {
+        transform: perspective(1em) rotateY(-0.3deg) scaleX(0.92);
+    }
+}
