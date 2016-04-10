@@ -9,7 +9,7 @@ import Sidebar from './side/sidebar';
 export default class Main extends React.Component {
   render(){
     return (
-      <div style={{display: 'flex', flexFlow: 'row'}}>
+      <div className="flexRow">
         <Sidebar />
         {this.props.children}
       </div>

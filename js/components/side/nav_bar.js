@@ -30,21 +30,6 @@ export default class NavBar extends React.Component {
     this.state = { 'navs' : navs };
   }
 
-  /*handleNavClick(e){
-    let reactId = e.target.getAttribute('data-reactid'),
-      newState = [],
-      idTarget = reactId.substring( reactId.lastIndexOf('$')+1, reactId.length);
-    // TODO: Dirty. Use router and "current" navigation
-    this.state.navs.map( (navObj) => {
-      if(navObj.id == idTarget) {
-        newState.push(Object.assign({}, navObj, {selected: true}));
-      } else {
-        newState.push(Object.assign({}, navObj, {selected: false}));
-      }
-    });
-    this.setState({ 'navs' : newState});
-  }*/
-
   render() {
     return (
       <div
