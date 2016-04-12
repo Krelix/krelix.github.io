@@ -3,10 +3,12 @@
  */
 import React from 'react';
 
-export default class About extends React.Component {
-  render() {
-    return (
+export default function render() {
+  return (
+    <div>
       <h1>About</h1>
-    );
-  }
+      <br />
+      <p>Hello, my name is Adrien. I usually go by the "Krelix" handle on many places.</p>
+    </div>
+  );
 }

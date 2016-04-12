@@ -12,53 +12,64 @@ body #sidebar {
   height: 100vh;
   display: flex;
   flex-flow: column;
+  color: #fff;
 }
-body #profileInfo {
+body #sidebar #profileInfo {
   margin: 20px;
   align-items: center;
   justify-content: space-around;
 }
-body #profileInfo img {
+body #sidebar #profileInfo img {
   width: 9vw;
 }
-body #profileInfo div {
+body #sidebar #profileInfo div {
   display: flex;
   flex-flow: column-reverse nowrap;
   align-items: center;
   margin: 0 15px;
 /* Reverse transform to straighten the text in the span */
 }
-body #profileInfo div .nameContainer {
+body #sidebar #profileInfo div .nameContainer {
   text-align: center;
   background-color: #ee2560;
-  color: #fff;
   padding: 10px 5px;
   box-shadow: 5px 5px 0 0 rgba(187,187,187,0.5);
 }
-body #profileInfo div .surname {
+body #sidebar #profileInfo div #surname {
   margin-top: 15px;
   transform: skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px);
   box-shadow: 5px 5px 0 0 rgba(187,187,187,0.5);
 }
-body #profileInfo div .surname span {
+body #sidebar #profileInfo div #surname span {
   display: block;
   transform: skewX(-30deg) rotate(-5deg) scale(0.9);
 }
-body #profileInfo div .realName {
+body #sidebar #profileInfo div #realname {
   padding: 10px 5px;
   margin-bottom: 20px;
   transform: skewX(-20deg) rotate(-5deg);
 }
-body #profileInfo div .realName span {
+body #sidebar #profileInfo div #realname span {
   display: block;
   transform: skewX(20deg) rotate(5deg);
 }
-.flexRow {
+body #sidebar #navbar {
+  margin-top: 20px;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
+  align-content: stretch;
+  font-size: 1.2em;
+  line-height: 3em;
 }
-.active {
-  background-color: #45d9fd !important;
+body #sidebar #navbar a {
+/* Have to force color on A otherwise it won't be styled */
+  color: #fff;
+  background-color: #8fdef2;
+  text-decoration: none;
+  padding-left: 1.5em;
+}
+body #sidebar #navbar .active {
+  background-color: #45d9fd;
   transform-style: preserve-3d;
   transform-origin: left center;
   animation-duration: 50ms;
@@ -67,6 +78,44 @@ body #profileInfo div .realName span {
   box-shadow: 5px 6px 0 0 rgba(187,187,187,0.5);
   animation-fill-mode: forwards;
   font-weight: bold;
+}
+body #sidebar #socnet {
+  background-color: #ee2560;
+  width: 18vw;
+  align-self: center;
+  margin-top: auto;
+}
+body #sidebar #socnet a {
+  color: #fff;
+  display: flex;
+  border: none;
+  font-decoration: none;
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-top: 0.2em;
+  vertical-align: super;
+  padding-left: 1.75em;
+}
+body #sidebar #socnet img {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: bottom;
+}
+body #sidebar #socnet span {
+  marginTop: 0.2em;
+}
+body main {
+  display: flex;
+  flex: 1 1;
+  padding: 0 5%;
+  align-content: center;
+  color: #08182b;
+  background-color: #fafafa;
+}
+/* class definitions */
+.flexRow {
+  display: flex;
+  flex-flow: row;
 }
 @-moz-keyframes testIn {
   from {
