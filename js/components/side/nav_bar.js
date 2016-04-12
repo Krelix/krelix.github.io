@@ -32,8 +32,7 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <div
-        style={{marginTop: '20px',display: 'flex', flexFlow: 'column', alignContent: 'stretch', fontSize: '1.2em', lineHeight:'3em'}}>
+      <div id="navbar">
         {
           this.state.navs.map((navObj) => {
             return (<NavItem key={navObj.id} title={navObj.title} to={navObj.to} isIndex={navObj.isIndex} />);

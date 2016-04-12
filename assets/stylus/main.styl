@@ -5,66 +5,104 @@ body
 	box-sizing border-box
 	overflow hidden
 	font-family "Helvetica Neue", Helvetica, Verdana, sans-serif
-
 	#sidebar
 		flex 0 0 20%
 		background-color #F4F4F4
 		height 100vh
 		display flex
 		flex-flow column
-
-	#profileInfo
-		margin 20px
-		align-items center
-		justify-content space-around
-
-		img
-			width 9vw
-
-		div
-			display flex
-			flex-flow column-reverse nowrap
+		color white
+		#profileInfo
+			margin 20px
 			align-items center
-			margin 0 15px
-
-			.nameContainer
-				text-align center
-				background-color #EE2560
+			justify-content space-around
+			img
+				width 9vw
+			div
+				display flex
+				flex-flow column-reverse nowrap
+				align-items center
+				margin 0 15px
+				.nameContainer
+					text-align center
+					background-color #EE2560
+					padding 10px 5px
+					box-shadow 5px 5px 0 0 rgba(187, 187, 187, .5)
+				#surname
+					margin-top 15px
+					transform skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px)
+					box-shadow 5px 5px 0 0 rgba(187, 187, 187, .5)
+					span
+						display block
+						transform skewX(-30deg) rotate(-5deg) scale(0.9)
+				/* Reverse transform to straighten the text in the span */
+				#realname
+					padding 10px 5px
+					margin-bottom 20px
+					transform skewX(-20deg) rotate(-5deg)
+					span
+						display block
+						transform skewX(20deg) rotate(5deg)
+		#navbar
+			margin-top 20px
+			display flex
+			flex-flow column
+			align-content stretch
+			font-size 1.2em
+			line-height 3em
+			a
+				/* Have to force color on A otherwise it won't be styled */
 				color white
-				padding 10px 5px
-				box-shadow 5px 5px 0 0 rgba(187, 187, 187, .5)
+				background-color #8FDEF2
+				text-decoration none
+				padding-left 1.5em
+			.active
+				background-color #45d9fd
+				transform-style preserve-3d
+				transform-origin left center
+				animation-duration 50ms
+				animation-name testIn
+				animation-timing-function ease-out
+				box-shadow 5px 6px 0 0 rgba(187, 187, 187, .5)
+				animation-fill-mode forwards
+				font-weight bold
 
-			.surname
-				margin-top 15px
-				transform skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px)
-				box-shadow 5px 5px 0 0 rgba(187, 187, 187, .5)
-				span
-					display block
-					transform skewX(-30deg) rotate(-5deg) scale(0.9)
-			/* Reverse transform to straighten the text in the span */
+		#socnet
+			background-color rgb(238, 37, 96)
+			width 18vw
+			align-self center
+			margin-top auto
+			a
+				color white
+				display flex
+				border none
+				font-decoration none
+				font-weight bold
+				font-size 1.25em
+				margin-top: .2em
+				vertical-align super
+				padding-left 1.75em
+			img
+				width 1.5em
+				height 1.5em
+				vertical-align bottom
+			span
+				marginTop 0.2em
 
-			.realName
-				padding 10px 5px
-				margin-bottom 20px
-				transform skewX(-20deg) rotate(-5deg)
-				span
-					display block
-					transform skewX(20deg) rotate(5deg)
+	main
+		display flex
+		flex 1 1
+		padding 0 5%
+		align-content center
+		color #08182b
+		background-color #fafafa
 
+
+/* class definitions */
 .flexRow
 	display flex
 	flex-flow row
 
-.active
-	background-color #45d9fd !important
-	transform-style preserve-3d
-	transform-origin left center
-	animation-duration 50ms
-	animation-name testIn
-	animation-timing-function ease-out
-	box-shadow 5px 6px 0 0 rgba(187, 187, 187, .5)
-	animation-fill-mode forwards
-	font-weight bold
 
 @keyframes testIn {
 	from {

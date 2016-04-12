@@ -12,10 +12,10 @@ export default class ProfileInfo extends React.Component {
       <div id="profileInfo" className="flexRow">
         <img src='https://avatars1.githubusercontent.com/u/506193?v=3&s=460' />
         <div>
-          <div className="nameContainer surname">
+          <div id="surname" className="nameContainer">
             <span>A.K.A Krelix</span>
           </div>
-          <div className="nameContainer realName">
+          <div id="realname" className="nameContainer">
             <span>Adrien BRIZARD</span>
           </div>
         </div>
