@@ -19,37 +19,43 @@ body #sidebar #profileInfo {
   align-items: center;
   justify-content: space-around;
 }
-body #sidebar #profileInfo img {
+body #sidebar #profileInfo #imgcontainer {
+  padding: 0;
+  margin: 0;
   width: 9vw;
 }
-body #sidebar #profileInfo div {
+body #sidebar #profileInfo #imgcontainer img {
+  width: 100%;
+}
+body #sidebar #profileInfo div:not(#imgcontainer) {
   display: flex;
+  flex: 0 0;
   flex-flow: column-reverse nowrap;
   align-items: center;
   margin: 0 15px;
 /* Reverse transform to straighten the text in the span */
 }
-body #sidebar #profileInfo div .nameContainer {
+body #sidebar #profileInfo div:not(#imgcontainer) .nameContainer {
   text-align: center;
   background-color: #ee2560;
   padding: 10px 5px;
   box-shadow: 5px 5px 0 0 rgba(187,187,187,0.5);
 }
-body #sidebar #profileInfo div #surname {
+body #sidebar #profileInfo div:not(#imgcontainer) #surname {
   margin-top: 15px;
   transform: skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px);
   box-shadow: 5px 5px 0 0 rgba(187,187,187,0.5);
 }
-body #sidebar #profileInfo div #surname span {
+body #sidebar #profileInfo div:not(#imgcontainer) #surname span {
   display: block;
   transform: skewX(-30deg) rotate(-5deg) scale(0.9);
 }
-body #sidebar #profileInfo div #realname {
+body #sidebar #profileInfo div:not(#imgcontainer) #realname {
   padding: 10px 5px;
   margin-bottom: 20px;
   transform: skewX(-20deg) rotate(-5deg);
 }
-body #sidebar #profileInfo div #realname span {
+body #sidebar #profileInfo div:not(#imgcontainer) #realname span {
   display: block;
   transform: skewX(20deg) rotate(5deg);
 }

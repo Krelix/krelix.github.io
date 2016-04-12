@@ -16,10 +16,16 @@ body
 			margin 20px
 			align-items center
 			justify-content space-around
-			img
-				width 9vw
-			div
+			#imgcontainer
+				padding 0
+				margin 0
+				width: 9vw
+				img
+					width: 100%
+
+			div:not(#imgcontainer)
 				display flex
+				flex 0 0
 				flex-flow column-reverse nowrap
 				align-items center
 				margin 0 15px

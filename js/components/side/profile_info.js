@@ -10,7 +10,9 @@ export default class ProfileInfo extends React.Component {
     // Also : -webkit-clip-path : polygon(14% 0, 85% 0, 78% 100%, 0% 100%); check http://bennettfeely.com/clippy/
     return (
       <div id="profileInfo" className="flexRow">
-        <img src='https://avatars1.githubusercontent.com/u/506193?v=3&s=460' />
+        <div id="imgcontainer">
+          <img src='https://avatars1.githubusercontent.com/u/506193?v=3&s=460' />
+        </div>
         <div>
           <div id="surname" className="nameContainer">
             <span>A.K.A Krelix</span>
