@@ -1,3 +1,11 @@
+bright-blue = #45d9fd
+light-blue = #8FDEF2
+white-color = #F4F4F4
+accent-color = #EE2560
+text-color = #08182b
+white-background = #fafafa
+shadow-color = rgba(187, 187, 187, .5)
+
 body
 	margin 0
 	padding 0
@@ -7,7 +15,7 @@ body
 	font-family "Helvetica Neue", Helvetica, Verdana, sans-serif
 	#sidebar
 		flex 0 0 20%
-		background-color #F4F4F4
+		background-color white-color
 		height 100vh
 		display flex
 		flex-flow column
@@ -31,9 +39,9 @@ body
 				margin 0 15px
 				.nameContainer
 					text-align center
-					background-color #EE2560
+					background-color accent-color
 					padding 10px 5px
-					box-shadow 5px 5px 0 0 rgba(187, 187, 187, .5)
+					box-shadow 5px 5px 0 0 shadow-color
 				#surname
 					margin-top 15px
 					transform skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px)
@@ -59,30 +67,30 @@ body
 			a
 				/* Have to force color on A otherwise it won't be styled */
 				color white
-				background-color #8FDEF2
+				background-color light-blue
 				text-decoration none
 				padding-left 1.5em
 			.active
-				background-color #45d9fd
+				background-color bright-blue
 				transform-style preserve-3d
 				transform-origin left center
-				animation-duration 50ms
+				animation-duration 100ms
 				animation-name testIn
 				animation-timing-function ease-out
-				box-shadow 5px 6px 0 0 rgba(187, 187, 187, .5)
+				box-shadow 5px 6px 0 0 shadow-color
 				animation-fill-mode forwards
 				font-weight bold
 
 		#socnet
-			background-color rgb(238, 37, 96)
-			width 18vw
+			background-color accent-color
+			width 100%
 			align-self center
 			margin-top auto
 			a
 				color white
 				display flex
 				border none
-				font-decoration none
+				text-decoration none
 				font-weight bold
 				font-size 1.25em
 				margin-top: .2em
@@ -100,20 +108,26 @@ body
 		flex 1 1
 		padding 0 5%
 		align-content center
-		color #08182b
-		background-color #fafafa
+		color text-color
+		background-color white-background
 
 		.project-card
 			width 20em
 			text-align justify
 			background-color white
 			padding 1em;
-			border solid 1px #f4f4f4
+			border double 1px accent-color
 			img
 				width 30%
 				float left
 				margin 0 1em 0 0
-
+				box-shadow 3px 4px 0 0 rgba(187, 187, 187, .5)
+		a
+			color text-color
+			padding .3em
+		a:hover
+			color white-color
+			background-color accent-color
 
 /* class definitions */
 .flexRow
