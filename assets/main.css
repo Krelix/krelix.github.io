@@ -118,6 +118,18 @@ body main {
   color: #08182b;
   background-color: #fafafa;
 }
+body main .project-card {
+  width: 20em;
+  text-align: justify;
+  background-color: #fff;
+  padding: 1em;
+  border: solid 1px #f4f4f4;
+}
+body main .project-card img {
+  width: 30%;
+  float: left;
+  margin: 0 1em 0 0;
+}
 /* class definitions */
 .flexRow {
   display: flex;

@@ -10,6 +10,15 @@ var GENERIC_PARAMS = {
   },
   output: {
     filename: 'app.js'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js?$/,
+        exclude: /(build|node_modules)/,
+        loader: 'babel'
+      }
+    ]
   }
 };
 
@@ -20,13 +29,13 @@ var DEV_PARAMS = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
-        exclude: /(build|node_modules)/,
-        loader: 'babel'
-      },
-      {
         test: /\.styl$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader'),
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(jpe?g|png|svg|gif)$/i,
+        loader: 'file',
         exclude: /node_modules/
       }
     ]
@@ -63,9 +72,18 @@ var DIST_PARAMS = {
   ]
 }
 
+var isProd = (function() {
+  var items = process.argv.filter(function (item) {
+    return /^--TARGET=[a-zA-Z]/.test(item);
+  });
+  if(items.length > 0)
+    return items[0].split('=')[1].toLowerCase() === 'prod';
+  return false;
+})();
 
+console.log(isProd);
 
 module.exports = (function(isProduction){
   var merged =  _.merge(GENERIC_PARAMS, isProduction ? DIST_PARAMS : DEV_PARAMS);
   return merged;
-})(false);
+})(isProd);

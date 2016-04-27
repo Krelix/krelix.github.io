@@ -13,6 +13,7 @@
     "eslint": "2.4.0",
     "eslint-plugin-react": "4.2.3",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.15.0",
     "lodash": "^4.11.1",
     "style-loader": "^0.13.1",
@@ -32,8 +33,8 @@
     "test": "",
     "watchStylus": "stylus -o assets/main.css -w assets/stylus/main.styl",
     "start": "webpack -w -d ./js/index.js --TARGET=DEV & webpack-dev-server --content-base dev/",
-    "dist": "NODE_ENV=production webpack -d --TARGET=prod ./js/index.js",
-    "build": "webpack -d ./js/index.js --TARGET=dev",
+    "dist": "NODE_ENV=production & stylus -o assets/main.css assets/stylus/main.styl & webpack -d --TARGET=prod ./js/index.js",
+    "build": "npm run webpack -d ./js/index.js --TARGET=dev",
     "watchJS": "webpack -w -d ./js/index.js",
     "watch": "concurrently \"npm run watchStylus\" \"npm run watchJS\" "
   }

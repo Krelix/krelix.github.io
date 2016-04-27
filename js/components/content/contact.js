@@ -6,7 +6,10 @@ import React from 'react';
 export default class Contact extends React.Component {
   render() {
     return (
-      <h1>Contact</h1>
+      <div>
+        <h1>Contact</h1>
+        <p>Twitter : @Krelix</p>
+      </div>
     );
   }
 }

@@ -9,7 +9,7 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import Main from './main'
 import About from './content/about';
 import Contact from './content/contact';
-import ProjectList from './content/project_list';
+import ProjectList from './content/project-list';
 
 export default class Routes extends React.Component {
   render() {

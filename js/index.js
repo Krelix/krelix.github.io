@@ -5,7 +5,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Routes from './components/routes';
-import css from '../assets/stylus/main.styl';
 
 ReactDOM.render(
   <Routes />,
