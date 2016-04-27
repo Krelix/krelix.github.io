@@ -81,8 +81,6 @@ var isProd = (function() {
   return false;
 })();
 
-console.log(isProd);
-
 module.exports = (function(isProduction){
   var merged =  _.merge(GENERIC_PARAMS, isProduction ? DIST_PARAMS : DEV_PARAMS);
   return merged;
