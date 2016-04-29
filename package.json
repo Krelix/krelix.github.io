@@ -31,11 +31,11 @@
   "scripts": {
     "clean": "",
     "test": "",
-    "watchStylus": "stylus -o assets/main.css -w assets/stylus/main.styl",
-    "start": "webpack -w -d ./js/index.js --TARGET=DEV & webpack-dev-server --content-base dev/",
-    "dist": "NODE_ENV=production & stylus -o assets/main.css assets/stylus/main.styl & webpack -d --TARGET=prod ./js/index.js",
-    "build": "npm run webpack -d ./js/index.js --TARGET=dev",
-    "watchJS": "webpack -w -d ./js/index.js",
-    "watch": "concurrently \"npm run watchStylus\" \"npm run watchJS\" "
+    "start": "concurrently \"npm run watchJS\" \"npm run watchStylus\" \"npm run webDev\" ",
+    "dist": "concurrently \"stylus -o assets/main.css assets/stylus/main.styl\" \"webpack -d --TARGET=prod ./js/index.js\"",
+    "build": "webpack -d ./js/index.js --TARGET=dev",
+    "watchJS": "webpack -w -d ./js/index.js --TARGET=DEV",
+    "watchStylus": "stylus -o dev/main.css -w assets/stylus/main.styl",
+    "webDev": "webpack-dev-server --content-base dev/"
   }
 }

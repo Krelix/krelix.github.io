@@ -9,56 +9,59 @@ shadow-color = rgba(187, 187, 187, .5)
 body
 	margin 0
 	padding 0
-	height 100vh
 	box-sizing border-box
 	overflow hidden
 	font-family "Helvetica Neue", Helvetica, Verdana, sans-serif
+	#container
+		/* Specific to the flex row in the container ? (should be) */
+		div:first
+			height: 100vh
 	#sidebar
-		flex 0 0 20%
+		flex 0 1 18%
 		background-color white-color
 		height 100vh
 		display flex
 		flex-flow column
 		color white
 		#profileInfo
-			margin 20px
+			margin .5em
 			align-items center
 			justify-content space-around
+			flex-flow: column
 			#imgcontainer
 				padding 0
 				margin 0
-				width: 9vw
+				width: 50%
 				img
 					width: 100%
 
 			div:not(#imgcontainer)
 				display flex
-				flex 0 0
+				flex 0 1 auto
 				flex-flow column-reverse nowrap
 				align-items center
-				margin 0 15px
-				.nameContainer
-					text-align center
-					background-color accent-color
-					padding 10px 5px
-					box-shadow 5px 5px 0 0 shadow-color
-				#surname
-					margin-top 15px
-					transform skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px)
-					box-shadow 5px 5px 0 0 rgba(187, 187, 187, .5)
-					span
-						display block
-						transform skewX(-30deg) rotate(-5deg) scale(0.9)
-				/* Reverse transform to straighten the text in the span */
-				#realname
-					padding 10px 5px
-					margin-bottom 20px
-					transform skewX(-20deg) rotate(-5deg)
-					span
-						display block
-						transform skewX(20deg) rotate(5deg)
+				margin 0 .5em
+			.nameContainer
+				text-align center
+				background-color accent-color
+				padding .3em .1em
+				box-shadow .3em .3em 0 0 shadow-color
+			#surname
+				margin-top .8em !important
+				transform skewX(30deg) rotate(5deg) scale(1.1) translateY(-5px)
+				span
+					display block
+					transform rotate(-5deg) skewX(-30deg) scale(0.9)
+			/* Reverse transform to straighten the text in the span */
+			#realname
+				padding .5em .5em
+				margin-bottom .5em !important
+				transform skewX(-20deg) rotate(-5deg)
+				span
+					display block
+					transform rotate(5deg) skewX(20deg)
 		#navbar
-			margin-top 20px
+			margin-top 1em
 			display flex
 			flex-flow column
 			align-content stretch
@@ -77,7 +80,7 @@ body
 				animation-duration 100ms
 				animation-name testIn
 				animation-timing-function ease-out
-				box-shadow 5px 6px 0 0 shadow-color
+				box-shadow .1em .11em 0 0 shadow-color
 				animation-fill-mode forwards
 				font-weight bold
 
@@ -101,16 +104,16 @@ body
 				height 1.5em
 				vertical-align bottom
 			span
-				marginTop 0.2em
+				margin-top 0.2em
 
 	main
 		display flex
-		flex 1 1
+		flex 1 1 80%
 		padding 0 5%
 		align-content center
 		color text-color
 		background-color white-background
-
+		overflow auto
 		.project-card
 			width 20em
 			text-align justify
@@ -137,10 +140,10 @@ body
 
 @keyframes testIn {
 	from {
-		transform perspective(1em) rotateY(0deg) scaleX(1)
+		transform perspective(.9em) rotateY(0deg) scaleX(1)
 	}
 
 	to {
-		transform perspective(1em) rotateY(-0.3deg) scaleX(0.92)
+		transform perspective(.9em) rotateY(-0.3deg) scaleX(1)
 	}
 }

@@ -1,13 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
 }
+body #container div:first {
+  height: 100vh;
+}
 body #sidebar {
-  flex: 0 0 20%;
+  flex: 0 1 18%;
   background-color: #f4f4f4;
   height: 100vh;
   display: flex;
@@ -15,52 +17,52 @@ body #sidebar {
   color: #fff;
 }
 body #sidebar #profileInfo {
-  margin: 20px;
+  margin: 0.5em;
   align-items: center;
   justify-content: space-around;
+  flex-flow: column;
+/* Reverse transform to straighten the text in the span */
 }
 body #sidebar #profileInfo #imgcontainer {
   padding: 0;
   margin: 0;
-  width: 9vw;
+  width: 50%;
 }
 body #sidebar #profileInfo #imgcontainer img {
   width: 100%;
 }
 body #sidebar #profileInfo div:not(#imgcontainer) {
   display: flex;
-  flex: 0 0;
+  flex: 0 1 auto;
   flex-flow: column-reverse nowrap;
   align-items: center;
-  margin: 0 15px;
-/* Reverse transform to straighten the text in the span */
+  margin: 0 0.5em;
 }
-body #sidebar #profileInfo div:not(#imgcontainer) .nameContainer {
+body #sidebar #profileInfo .nameContainer {
   text-align: center;
   background-color: #ee2560;
-  padding: 10px 5px;
-  box-shadow: 5px 5px 0 0 rgba(187,187,187,0.5);
+  padding: 0.3em 0.1em;
+  box-shadow: 0.3em 0.3em 0 0 rgba(187,187,187,0.5);
 }
-body #sidebar #profileInfo div:not(#imgcontainer) #surname {
-  margin-top: 15px;
-  transform: skewX(30deg) rotate(5deg) scale(1.1) translateY(-2px);
-  box-shadow: 5px 5px 0 0 rgba(187,187,187,0.5);
+body #sidebar #profileInfo #surname {
+  margin-top: 0.8em !important;
+  transform: skewX(30deg) rotate(5deg) scale(1.1) translateY(-5px);
 }
-body #sidebar #profileInfo div:not(#imgcontainer) #surname span {
+body #sidebar #profileInfo #surname span {
   display: block;
-  transform: skewX(-30deg) rotate(-5deg) scale(0.9);
+  transform: rotate(-5deg) skewX(-30deg) scale(0.9);
 }
-body #sidebar #profileInfo div:not(#imgcontainer) #realname {
-  padding: 10px 5px;
-  margin-bottom: 20px;
+body #sidebar #profileInfo #realname {
+  padding: 0.5em 0.5em;
+  margin-bottom: 0.5em !important;
   transform: skewX(-20deg) rotate(-5deg);
 }
-body #sidebar #profileInfo div:not(#imgcontainer) #realname span {
+body #sidebar #profileInfo #realname span {
   display: block;
-  transform: skewX(20deg) rotate(5deg);
+  transform: rotate(5deg) skewX(20deg);
 }
 body #sidebar #navbar {
-  margin-top: 20px;
+  margin-top: 1em;
   display: flex;
   flex-flow: column;
   align-content: stretch;
@@ -81,7 +83,7 @@ body #sidebar #navbar .active {
   animation-duration: 100ms;
   animation-name: testIn;
   animation-timing-function: ease-out;
-  box-shadow: 5px 6px 0 0 rgba(187,187,187,0.5);
+  box-shadow: 0.1em 0.11em 0 0 rgba(187,187,187,0.5);
   animation-fill-mode: forwards;
   font-weight: bold;
 }
@@ -108,15 +110,16 @@ body #sidebar #socnet img {
   vertical-align: bottom;
 }
 body #sidebar #socnet span {
-  marginTop: 0.2em;
+  margin-top: 0.2em;
 }
 body main {
   display: flex;
-  flex: 1 1;
+  flex: 1 1 80%;
   padding: 0 5%;
   align-content: center;
   color: #08182b;
   background-color: #fafafa;
+  overflow: auto;
 }
 body main .project-card {
   width: 20em;
@@ -146,33 +149,33 @@ body main a:hover {
 }
 @-moz-keyframes testIn {
   from {
-    transform: perspective(1em) rotateY(0deg) scaleX(1);
+    transform: perspective(0.9em) rotateY(0deg) scaleX(1);
   }
   to {
-    transform: perspective(1em) rotateY(-0.3deg) scaleX(0.92);
+    transform: perspective(0.9em) rotateY(-0.3deg) scaleX(1);
   }
 }
 @-webkit-keyframes testIn {
   from {
-    transform: perspective(1em) rotateY(0deg) scaleX(1);
+    transform: perspective(0.9em) rotateY(0deg) scaleX(1);
   }
   to {
-    transform: perspective(1em) rotateY(-0.3deg) scaleX(0.92);
+    transform: perspective(0.9em) rotateY(-0.3deg) scaleX(1);
   }
 }
 @-o-keyframes testIn {
   from {
-    transform: perspective(1em) rotateY(0deg) scaleX(1);
+    transform: perspective(0.9em) rotateY(0deg) scaleX(1);
   }
   to {
-    transform: perspective(1em) rotateY(-0.3deg) scaleX(0.92);
+    transform: perspective(0.9em) rotateY(-0.3deg) scaleX(1);
   }
 }
 @keyframes testIn {
   from {
-    transform: perspective(1em) rotateY(0deg) scaleX(1);
+    transform: perspective(0.9em) rotateY(0deg) scaleX(1);
   }
   to {
-    transform: perspective(1em) rotateY(-0.3deg) scaleX(0.92);
+    transform: perspective(0.9em) rotateY(-0.3deg) scaleX(1);
   }
 }

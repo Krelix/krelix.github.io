@@ -10,7 +10,7 @@ import Content from './content/content';
 export default class Main extends React.Component {
   render(){
     return (
-      <div className="flexRow">
+      <div className="flexRow" style={{height : "100vh"}}>
         <Sidebar />
         <Content>
           {this.props.children}
