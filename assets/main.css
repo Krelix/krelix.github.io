@@ -15,6 +15,9 @@ body #sidebar {
   display: flex;
   flex-flow: column;
   color: #fff;
+  font-family: Bangers;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
 }
 body #sidebar #profileInfo {
   margin: 0.5em;
@@ -66,7 +69,6 @@ body #sidebar #navbar {
   display: flex;
   flex-flow: column;
   align-content: stretch;
-  font-size: 1.2em;
   line-height: 3em;
 }
 body #sidebar #navbar a {
@@ -99,7 +101,6 @@ body #sidebar #socnet a {
   border: none;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.25em;
   margin-top: 0.2em;
   vertical-align: super;
   padding-left: 10%;
